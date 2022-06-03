@@ -1,4 +1,4 @@
-const questions = [
+export const questions = [
   {
     id: 1,
     question: `Louis van Gaal mistakenly referred to which Manchester United player as 'Mike' in a press conference?`,
@@ -240,5 +240,3 @@ const questions = [
     correct: 'Seven',
   },
 ];
-
-module.exports = { questions };
