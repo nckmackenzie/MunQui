@@ -17,10 +17,10 @@ export default function QuestionItem({
       if (answer === correct) {
         setQuestionNo(questionNo + 1);
       } else {
-        navigate('/result?win=false', { replace: true });
+        navigate('/result?outcome=lose', { replace: true });
       }
     } else {
-      navigate('/result?win=true', { replace: true });
+      navigate('/result?outcome=win', { replace: true });
     }
   };
 
