@@ -17,7 +17,7 @@ export default function QuestionItem({
       if (answer === correct) {
         setQuestionNo(questionNo + 1);
       } else {
-        navigate('/results?win=false', { replace: true });
+        navigate('/result?win=false', { replace: true });
       }
     } else {
       navigate('/result?win=true', { replace: true });
