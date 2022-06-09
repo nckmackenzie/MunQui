@@ -1,14 +1,20 @@
+import { useState, useEffect } from 'react';
 import { winningMultiplier } from '../../data';
 import WinningItem from './WinningItem';
-export default function Winnings({ level }) {
-  let levelPoints;
-  if (level === 'easy') {
-    levelPoints = 500;
-  } else if (level === 'medium') {
-    levelPoints = 1000;
-  } else {
-    levelPoints = 5000;
-  }
+import { useQuestion } from '../../context/QuestionProvider';
+export default function Winnings() {
+  const { level } = useQuestion();
+  const [levelPoints, setLevelPoints] = useState(0);
+
+  useEffect(() => {
+    if (level === 'easy') {
+      setLevelPoints(500);
+    } else if (level === 'medium') {
+      setLevelPoints(1000);
+    } else {
+      setLevelPoints(5000);
+    }
+  }, [level]);
 
   return (
     <div className="basis-1/3 bg-gray-100 p-6 ">
