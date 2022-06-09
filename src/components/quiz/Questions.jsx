@@ -2,8 +2,8 @@ import { questions } from '../../data';
 import QuestionItem from './QuestionItem';
 import { useQuestion } from '../../context/QuestionProvider';
 
-export default function Questions({ level }) {
-  const { questionNo } = useQuestion();
+export default function Questions() {
+  const { level, questionNo } = useQuestion();
 
   return (
     <div className="basis-2/3 py-2 relative">
