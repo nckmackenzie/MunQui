@@ -20,7 +20,7 @@ export default function QuestionItem({
         navigate('/results?win=false', { replace: true });
       }
     } else {
-      navigate('/results?win=true', { replace: true });
+      navigate('/result?win=true', { replace: true });
     }
   };
 
